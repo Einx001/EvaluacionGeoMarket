@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->text('textComment');
+            $table->double('starValueComment');
 
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('publication_id')->nullable();

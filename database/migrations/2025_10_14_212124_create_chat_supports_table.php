@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('chat_supports', function (Blueprint $table) {
             $table->id();
-            $table->text('descriptionSeller');
+            $table->text('messageChatSupport');
+            $table->boolean('servedChatSupport');
 
             $table->unsignedBigInteger('user_id')->nullable();
 

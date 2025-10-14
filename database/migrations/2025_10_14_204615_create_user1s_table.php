@@ -14,7 +14,12 @@ return new class extends Migration
         Schema::create('user1s', function (Blueprint $table) {
             $table->id();
             $table->text('nameUser');
-            $table->text('lastNameUser');
+            $table->text('seccondNameUser');
+            $table->text('firtsLastNameUser');
+            $table->text('seccondLastNameUser');
+            $table->text('emailUser');
+            $table->text('passwordUser');
+            $table->boolean('activeUser');
 
             $table->unsignedBigInteger('rol_id')->nullable();
 

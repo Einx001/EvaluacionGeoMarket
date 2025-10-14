@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('complaints', function (Blueprint $table) {
             $table->id();
-            $table->text('textComplaint');
+            $table->boolean('stateComplaint');
+            $table->text('descriptionComplaint');
 
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('publication_id')->nullable();

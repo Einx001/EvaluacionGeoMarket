@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('publications', function (Blueprint $table) {
             $table->id();
             $table->text('titlePublication');
+            $table->int('pricePublication');
+            $table->text('descriptionPublication');
+            $table->boolean('visibilityPublication');
 
             $table->unsignedBigInteger('seller_id')->nullable();
             $table->unsignedBigInteger('category_id')->nullable();
